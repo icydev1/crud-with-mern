@@ -1,12 +1,15 @@
 import React from 'react'
-
+import { NavLink } from "react-router-dom";
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 export const Home = () => {
   return (
     <div className="mt-5">
         <div className="container">
             <div className="add_btn mt-2">
                     <div className="btn btn-primary">
-                        Add Data
+                        <NavLink to='/register'><button className='btn'>Add Data</button></NavLink>
                     </div>
             </div>
 
@@ -29,10 +32,9 @@ export const Home = () => {
       <td>React</td>
       <td>98789789</td>
       <td className='d-flex justify-content-between'>
-
-        <button className='btn btn-success'><i className="fa fa-eye" aria-hidden="true"></i></button>
-        <button className='btn btn-primary'><i className="fas fa-pen"></i></button>
-        <button className='btn btn-danger'> <i className="fas fa-trash"></i></button>
+        <NavLink to="/view/1"><button className='btn btn-success'><VisibilityIcon /></button></NavLink>
+        <NavLink to="/edit/1"><button className='btn btn-primary'><EditIcon /></button></NavLink>
+        <button className='btn btn-danger'> <DeleteIcon /></button>
       </td>
     </tr>
     <tr >
@@ -42,10 +44,9 @@ export const Home = () => {
       <td>React</td>
       <td>98789789</td>
       <td className='d-flex justify-content-between'>
-
-        <button className='btn btn-success'><i className="fa fa-eye" aria-hidden="true"></i></button>
-        <button className='btn btn-primary'><i className="fas fa-pen"></i></button>
-        <button className='btn btn-danger'> <i className="fas fa-trash"></i></button>
+        <NavLink to="/view/1"><button className='btn btn-success'><VisibilityIcon /></button></NavLink>
+        <NavLink to="/edit/1"><button className='btn btn-primary'><EditIcon /></button></NavLink>
+        <button className='btn btn-danger'> <DeleteIcon /></button>
       </td>
     </tr>
     
